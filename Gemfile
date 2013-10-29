@@ -19,6 +19,9 @@ group :assets do
 
   gem 'compass-rails'
   gem 'uglifier', '>= 1.0.3'
+
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+                              :github => 'anjlab/bootstrap-rails'
 end
 
 gem 'jquery-rails'
@@ -38,8 +41,7 @@ gem "capistrano"
 # To use debugger
 # gem 'debugger'
 
-gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
-                              :github => 'anjlab/bootstrap-rails'
+
 gem "rvm-capistrano"
 gem "haml"
 gem "haml-rails"
