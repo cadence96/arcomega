@@ -1,0 +1,28 @@
+
+#carousel-generic.carousel.diapositiva
+
+  %ol.carousel-indicators
+    - @diapositivas.each_with_index do |diapositiva, index|
+      - if index == 0
+        %li.active{:'data-target' => '#carousel-generic', :'data-diapositiva-to' => index}
+      - else
+        %li{:'data-target' => '#carousel-generic', :'data-diapositiva-to' => index}
+
+  .carousel-inner
+    - @diapositivas.each_with_index do |diapositiva, index|
+      - if index == 0
+        .item.active
+          = image_tag diapositiva.imagen_url(:full)
+          .carousel-caption
+            %p.faltan Faltan:
+            .contador
+      - else
+        .item
+          = image_tag diapositiva.imagen_url(:full)
+          .carousel-caption
+            %p.caption
+              = diapositiva.titulo
+
+  -#
+    = link_to content_tag(:span, '', class: 'icon-prev'), '#carousel-generic', :'data-diapositiva' => 'prev'
+    = link_to content_tag(:span, '', class: 'icon-next'), '#carousel-generic', :'data-diapositiva' => 'next'

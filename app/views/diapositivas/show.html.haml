@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Titulo:
+  = @diapositiva.titulo
+%p
+  %b Descripcion:
+  = @diapositiva.descripcion
+%p
+  %b Imagen:
+  = image_tag @diapositiva.imagen_url(:full)
+
+= link_to 'Edit', edit_diapositiva_path(@diapositiva)
+\|
+= link_to 'Back', diapositivas_path

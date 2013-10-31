@@ -1,0 +1,42 @@
+
+.navbar-default,
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {border: 0; background: none}
+.navbar-default {
+  .navbar-nav {
+    & > li {
+      & > a {color: black; font-size: $size-menu}
+      &.last {
+        a {padding-right: 0}
+      }  
+    }
+  }
+}
+
+
+#main-header {
+  .header-top {min-height: 40px}
+  .header-inner {background: $yellow; border-top: 8px solid $green; height: 95px}
+  padding-bottom: 20px; background: $shadow;
+}
+
+#logo {position: relative; top:-20px; z-index: 200;
+  @extend .clearfix;
+  a {padding: 0; background: white;}
+}
+
+
+#carousel-generic {
+  .carousel-inner {
+    img {width: 100%}
+  }
+}
+
+#home-productos {
+  img {float: left; margin-right: 20px}
+}
+
+ul {
+  @include no-bullet;
+}
+
+
