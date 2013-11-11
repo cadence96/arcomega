@@ -1,1 +1,29 @@
 = render 'bootstrap3_carousel'
+
+
+
+
+
+#region-presentacion
+  .container
+    .region
+      .block
+        %p
+          Arcomega es una imprenta digital ubicada en el distrito de La Molina, Lima - Perú.<br />
+          Nos especializamos en impresión digital de afiches, tarjetas, volantes, revistas, paneles y más...
+      
+
+#region-productos
+  .container
+    - @categorias.each_slice(3) do |categoria|
+      .region
+        - categoria.each do |categoria|
+          .block
+            = link_to categoria.titulo, categoria
+
+
+
+-#
+    @slides = Slide.order("created_at DESC")
+    @productos = Producto.order("created_at DESC").limit(9)
+    @fortalezas = Fortaleza.all

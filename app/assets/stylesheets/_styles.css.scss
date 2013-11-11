@@ -18,6 +18,9 @@
   .header-inner {background: $yellow; border-top: 8px solid $green; height: 95px}
   padding-bottom: 20px; background: $shadow;
 }
+#main-footer {
+
+}
 
 #logo {position: relative; top:-20px; z-index: 200;
   @extend .clearfix;
@@ -29,10 +32,6 @@
   .carousel-inner {
     img {width: 100%}
   }
-}
-
-#home-productos {
-  img {float: left; margin-right: 20px}
 }
 
 ul {

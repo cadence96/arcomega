@@ -1,0 +1,27 @@
+%h1 Listing servicios
+
+%table
+  %tr
+    %th Titulo
+    %th Descripcion
+    %th Image
+    %th Slug
+    %th Categoria
+    %th
+    %th
+    %th
+
+  - @servicios.each do |servicio|
+    %tr
+      %td= servicio.titulo
+      %td= servicio.descripcion
+      %td= servicio.image
+      %td= servicio.slug
+      %td= servicio.categoria_id
+      %td= link_to 'Show', servicio
+      %td= link_to 'Edit', edit_servicio_path(servicio)
+      %td= link_to 'Destroy', servicio, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Servicio', new_servicio_path

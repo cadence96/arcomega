@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131031062327) do
+ActiveRecord::Schema.define(:version => 20131111071936) do
 
   create_table "categorias", :force => true do |t|
     t.string   "titulo"
@@ -35,8 +35,8 @@ ActiveRecord::Schema.define(:version => 20131031062327) do
     t.string   "titulo"
     t.text     "descripcion"
     t.string   "image"
-    t.integer  "categoria_id"
     t.string   "slug"
+    t.integer  "categoria_id"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end

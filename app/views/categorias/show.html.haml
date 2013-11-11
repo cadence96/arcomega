@@ -1,0 +1,24 @@
+= link_to 'Nuevo Servicio', new_categoria_servicio_path(@categoria)
+
+%p#notice= notice
+
+%p
+  %b Titulo:
+  = @categoria.titulo
+%p
+  %b Descripcion:
+  = @categoria.descripcion
+%p
+  %b Image:
+  = @categoria.image
+%p
+  %b Slug:
+  = @categoria.slug
+
+= link_to 'Edit', edit_categoria_path(@categoria)
+\|
+= link_to 'Back', categorias_path
+
+
+- @servicios.each do |servicio|
+  = servicio.titulo

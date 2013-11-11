@@ -1,4 +1,11 @@
 Arcomega::Application.routes.draw do
+
+
+  resources :categorias do
+    resources :servicios
+  end
+  resources :servicios
+
   resources :diapositivas
 
 
